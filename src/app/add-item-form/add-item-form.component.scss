@@ -1,0 +1,29 @@
+.wrapper{
+    // display: inline;
+    height: 100px;
+}
+
+.container{
+    display: inline-flex;
+    // justify-content: center;
+    gap: 10px;
+    align-items: center;
+    // padding: auto;
+}
+
+.mat-form-field-wrapper{
+    padding: 0;
+    border: red solid 1px;
+}
+
+::ng-deep .mat-form-field-wrapper{
+   margin-bottom: -1.25em;
+//    margin-bottom: 0 !important;
+}
+
+.item-input{
+    width: 150px;
+}
+.item-desc{
+    width: 400px;
+}

@@ -1,0 +1,20 @@
+.main-header {
+    width: 100%;
+    background-color: rgb(10, 97, 126);
+    height: 68px;
+    display: flex;
+    h1 {
+        text-transform: uppercase;
+        margin: auto;
+        font-size: 2rem;
+        letter-spacing: 6px;
+    }
+}
+
+.total-cash-budget {
+    padding: 20px;
+}
+
+section {
+    text-align: center;
+}

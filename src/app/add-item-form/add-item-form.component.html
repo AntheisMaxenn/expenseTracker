@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <form [formGroup]="form">
+        <!-- [formGroup]="form" -->
+        <div class="container">
+
+
+            <mat-form-field class="item-input input" appearance="fill" floatLabel="always">
+                <mat-label>Amount: </mat-label>
+                <input formControlName="value" id="value" matInput type="number">
+                <span matPrefix>$&nbsp;</span>
+                <span matSuffix>.00</span>
+            </mat-form-field>
+
+            <!-- item desc -->
+            <mat-form-field class="item-desc input" appearance="fill">
+                <!-- <mat-label>Work Salary..</mat-label> -->
+                <input formControlName="desc" id="desc" matInput placeholder="Work Salary">
+            </mat-form-field>
+
+            <!-- <p *ngIf="editItem">
+                Index number: {{this.indexNumber}} here!
+            </p> -->
+
+            <button *ngIf="!editItem" mat-raised-button color="primary" (click)="addItem()">Add</button>
+            <button *ngIf="editItem" mat-raised-button color="primary" (click)="modItem(this.indexNumber)">Edit</button>
+        </div>
+
+    </form>
+
+</div>

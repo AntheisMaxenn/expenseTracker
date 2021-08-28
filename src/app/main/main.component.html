@@ -1,0 +1,21 @@
+<section class="main-header">
+    <h1> Expense tracker:</h1>
+</section>
+
+<section class="total-cash-budget">
+    <!-- <h3> -->
+    <h1 *ngIf="total"> {{total | async | currency}}</h1>
+    <h1 *ngIf="(!(total | async) && ((total | async) != 0) )"> $XXX </h1>
+    <!-- </h3> -->
+</section>
+
+<section class="add-item-wrapper">
+    <div class="add-item-container">
+
+        <app-add-item-form></app-add-item-form>
+    </div>
+</section>
+
+<hr class="horizontal-breaker">
+
+<app-item-list></app-item-list>

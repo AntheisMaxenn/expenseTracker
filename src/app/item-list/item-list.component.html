@@ -1,0 +1,46 @@
+<div class="wrapper">
+
+    <!-- Split array based on value + or - -->
+
+    <div class="column">
+
+        <!-- <h3>Positive</h3> -->
+        <div class="container" *ngFor="let Item of listArray | async; let i = index">
+
+            <div class="value-container" *ngIf="Item.value  >= 0" (click)="openDialog(Item, i)">
+                <p style="background-color: lightgreen;">
+                    {{ Item.value | currency }}
+                </p>
+                <p id="item-desc">
+                    {{ Item.desc }}
+                </p>
+                <button (click)="deleteItem(i)" class="delete-btn" mat-mini-fab color="warn" aria-label="Example icon button with a menu icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+
+        <!-- <h3>Negative</h3> -->
+
+        <div class="container" *ngFor="let Item of listArray | async; let i = index">
+
+            <div class="value-container " *ngIf="Item.value < 0 " (click)="openDialog(Item, i) ">
+                <p style="background-color: darkgray; border-radius: 10px;">
+                    {{ Item.value | currency }}
+                </p>
+                <p id="item-desc">
+                    {{ Item.desc }}
+                </p>
+
+                <button (click)="deleteItem(i)" class="delete-btn" mat-mini-fab color="warn" aria-label="Example icon button with a menu icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
